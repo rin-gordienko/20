@@ -1,3 +1,5 @@
+"use strict"
+
 const $ = require("jquery");
 // import addTask from "./addTask";
 import "../css/style.css";

@@ -1,5 +1,5 @@
 const $ = require("jquery");
-import "bootstrap";
+// import addTask from "./addTask";
 import "../css/style.css";
 
 const form = document.forms["task-form"];

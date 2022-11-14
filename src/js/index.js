@@ -2,7 +2,7 @@
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/style.css";
-import { addTask } from "./newTask";
+// import { addTask } from "./newTask";
 
 const form = document.forms["task-form"];
 const { input } = form;
@@ -14,23 +14,23 @@ function isEmptyField(field) {
   return field.value.trim().length === 0;
 }
 
-// function addTask() {
-//   const task = document.createElement("li");
-//   task.classList.add("task", "list-group-item");
-//   task.innerHTML = input.value;
-//   list.append(task);
-//   input.value = "";
+function addTask() {
+  const task = document.createElement("li");
+  task.classList.add("task", "list-group-item");
+  task.innerHTML = input.value;
+  list.append(task);
+  input.value = "";
 
-//   const btnDelete = document.createElement("button");
-//   btnDelete.innerHTML = "X";
-//   task.append(btnDelete);
-//   btnDelete.classList.add("btn-delete");
+  const btnDelete = document.createElement("button");
+  btnDelete.innerHTML = "X";
+  task.append(btnDelete);
+  btnDelete.classList.add("btn-delete");
 
-//   const checkbox = document.createElement("input");
-//   checkbox.type = "checkbox";
-//   checkbox.classList.add("checkbox");
-//   task.prepend(checkbox);
-// }
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.classList.add("checkbox");
+  task.prepend(checkbox);
+}
 
 list.onchange = (event) => {
   const isAccepted = event.target.checked;
